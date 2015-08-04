@@ -1,0 +1,75 @@
+[2015-08-04 09:40:05] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'm' (T_STRING)' in C:\xampp\htdocs\laratest\app\Http\Controllers\WelcomeController.php:38
+Stack trace:
+#0 {main}  
+[2015-08-04 09:50:41] local.ERROR: exception 'ReflectionException' with message 'Class App\Http\Controllers\PagesController does not exist' in C:\xampp\htdocs\laratest\vendor\compiled.php:1029
+Stack trace:
+#0 C:\xampp\htdocs\laratest\vendor\compiled.php(1029): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\xampp\htdocs\laratest\vendor\compiled.php(980): Illuminate\Container\Container->build('App\\Http\\Contro...', Array)
+#2 C:\xampp\htdocs\laratest\vendor\compiled.php(1501): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#3 C:\xampp\htdocs\laratest\vendor\compiled.php(8413): Illuminate\Foundation\Application->make('App\\Http\\Contro...')
+#4 C:\xampp\htdocs\laratest\vendor\compiled.php(8402): Illuminate\Routing\ControllerDispatcher->makeController('App\\Http\\Contro...')
+#5 C:\xampp\htdocs\laratest\vendor\compiled.php(7404): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'about')
+#6 C:\xampp\htdocs\laratest\vendor\compiled.php(7375): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\laratest\vendor\compiled.php(7041): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\laratest\vendor\compiled.php(9053): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\laratest\vendor\compiled.php(9036): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\laratest\vendor\compiled.php(7042): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#13 C:\xampp\htdocs\laratest\vendor\compiled.php(7031): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\laratest\vendor\compiled.php(7016): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\laratest\vendor\compiled.php(1989): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\laratest\vendor\compiled.php(9053): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\laratest\vendor\compiled.php(2492): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\laratest\app\Http\Middleware\VerifyCsrfToken.php(17): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): App\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 C:\xampp\htdocs\laratest\vendor\compiled.php(12202): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\xampp\htdocs\laratest\vendor\compiled.php(10903): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 C:\xampp\htdocs\laratest\vendor\compiled.php(11908): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\xampp\htdocs\laratest\vendor\compiled.php(11857): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\xampp\htdocs\laratest\vendor\compiled.php(2532): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\xampp\htdocs\laratest\vendor\compiled.php(9045): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 C:\xampp\htdocs\laratest\vendor\compiled.php(9036): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#33 C:\xampp\htdocs\laratest\vendor\compiled.php(1945): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#34 C:\xampp\htdocs\laratest\vendor\compiled.php(1932): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#35 C:\xampp\htdocs\laratest\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#36 {main}  
+[2015-08-04 09:54:02] local.ERROR: exception 'InvalidArgumentException' with message 'Command "make" is not defined.
+
+Did you mean one of these?
+    make:controller
+    make:middleware
+    make:migration
+    make:provider
+    make:command
+    make:request
+    make:console
+    make:model
+    make:event' in C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Command\HelpCommand.php(76): Symfony\Component\Console\Application->find('make')
+#1 C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Symfony\Component\Console\Command\HelpCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Symfony\Component\Console\Command\HelpCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\laratest\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\laratest\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\laratest\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2015-08-04 10:10:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in C:\xampp\htdocs\laratest\storage\framework\views\0e3635f4d1ab0de0dc974ad24a9a5031:6
+Stack trace:
+#0 {main}  
+[2015-08-04 10:26:02] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Html\HtmlServiceProvider' not found' in C:\xampp\htdocs\laratest\vendor\compiled.php:6547
+Stack trace:
+#0 {main}  
+[2015-08-04 10:27:09] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Html\HtmlServiceProvider' not found' in C:\xampp\htdocs\laratest\vendor\compiled.php:6547
+Stack trace:
+#0 {main}  
+[2015-08-04 10:34:11] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Html\HtmlServiceProvider' not found' in C:\xampp\htdocs\laratest\vendor\compiled.php:6547
+Stack trace:
+#0 {main}  

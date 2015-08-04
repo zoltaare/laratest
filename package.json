@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "laravel-elixir": "*"
+  },
+  "autoload": {
+  	"classmap": [
+  		"app/commands",
+  		"app/models",
+  		"app/controllers",
+  		"app/database/migrations",
+  		"app/database/seeds",
+  		"app/tests/TestCase.php"
+  	]
+  },
+  "minimum-stability": "dev"
+}
+ 
