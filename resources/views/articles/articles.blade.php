@@ -13,7 +13,7 @@
 			  	</h4>
 			  </div>
 			  <div class="panel-body">{{ $article->body }}</div>
-			  <div class="panel-footer">By {{ $article->author }}&#64;{{ $article->created_at }}</div>
+			  <div class="panel-footer">By {{ $article->author }}&#64;{{ $article->published_at }}</div>
 			</div>
 			@endforeach
 		</div>

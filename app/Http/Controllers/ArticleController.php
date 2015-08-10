@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Articles;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -9,7 +10,7 @@ class ArticleController extends Controller {
 
 	public function index()
 	{
-		$articles = Articles::orderBy('created_at', 'desc')->get();
+		$articles = Articles::latest('published_at')->published()->get();
 		return view('articles.articles', compact('articles'));
 	}
 
@@ -17,6 +18,7 @@ class ArticleController extends Controller {
 	{
 		$article = Articles::findOrFail($id);
 
+		dd( $article->published_at ); 
 		return view('articles.show', compact('article'));
 	}
 
@@ -27,9 +29,7 @@ class ArticleController extends Controller {
 
 	public function store()
 	{
-		$inputs = Request::all();
-
-		Articles::create( $inputs );
+		Articles::create( Request::all() );
 
 		return redirect('articles');
 	}
