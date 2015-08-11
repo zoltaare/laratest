@@ -2,7 +2,7 @@
 
 use Carbon\Carbon;
 use App\Articles;
-use App\Http\Requests\CreateArticleRequest;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller {
@@ -17,7 +17,7 @@ class ArticleController extends Controller {
 	{
 		$article = Articles::findOrFail($id);
 
-		dd( $article->published_at ); 
+		// dd( $article->published_at ); 
 		return view('articles.show', compact('article'));
 	}
 
@@ -26,10 +26,23 @@ class ArticleController extends Controller {
 		return view('articles.create');
 	}
 
-	public function store(CreateArticleRequest $request)
+	public function store(ArticleRequest $request)
 	{
 		Articles::create( $request->all() );
 
+		return redirect('articles');
+	}
+
+	public function edit( $id )
+	{
+		$article = Articles::findOrFail( $id );
+		return view( 'articles.edit', compact( 'article' ) );
+	}
+
+	public function update($id , ArticleRequest $request)
+	{
+		$article = Articles::findOrFail( $id );
+		$article->update( $request->all() );
 		return redirect('articles');
 	}
 

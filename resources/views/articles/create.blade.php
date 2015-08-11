@@ -5,34 +5,14 @@
 	<div class="container">
 		<h1>New Article</h1>
 		<hr/>
+		
+		@include( 'errors.article_error' )
+
 		{!! Form::open( ['url' => 'articles'] ) !!}
-			<!-- Title -->
-			<div class="form-group">
-				{!! Form::label('title', 'Title:') !!}
-				{!! Form::text('title', null, ['class' => 'form-control']) !!}				
-			</div>
-			<!-- Body -->
-			<div class="form-group">
-				{!! Form::label('body', 'Body:') !!}
-				{!! Form::textarea('body', null, ['class' => 'form-control']) !!}				
-			</div>
-			<!-- Published At -->
-			<div class="form-group">
-				{!! Form::label('published_at', 'Publish On:') !!}
-				{!! Form::input('date', 'published_at', date('Y-m-d'), ['class' => 'form-control']) !!}				
-			</div>
-			<!-- Submit -->
-			<div class="form-group">
-				{!! Form::submit('Add Article', ['class' => 'btn btn-primary form-control']) !!}				
-			</div>
+
+			@include( 'articles._form', ['submitButtonText' => 'Add Article'] )
+
 		{!! Form::close() !!}
 
-		@if( $errors->any() )
-			<ul class="alert alert-danger">
-				@foreach( $errors->all() as $error )
-					<li>{{ $error }}</li>
-				@endforeach				
-			</ul>
-		@endif
 	</div>
 @stop
