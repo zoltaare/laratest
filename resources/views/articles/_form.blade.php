@@ -1,6 +1,3 @@
-<!-- Temporary -->
-{!! Form::hidden('user_id' , 1) !!}
-
 <!-- Title -->
 <div class="form-group">
 	{!! Form::label('title', 'Title:') !!}

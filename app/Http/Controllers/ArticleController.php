@@ -11,13 +11,12 @@ class ArticleController extends Controller {
 	{
 		$articles = Articles::latest('published_at')->published()->get();
 		return view('articles.articles', compact('articles'));
+		// return \Auth::user()->article;
 	}
 
 	public function show($id)
 	{
 		$article = Articles::findOrFail($id);
-
-		// dd( $article->published_at ); 
 		return view('articles.show', compact('article'));
 	}
 
@@ -28,8 +27,9 @@ class ArticleController extends Controller {
 
 	public function store(ArticleRequest $request)
 	{
-		Articles::create( $request->all() );
-
+		$article = new Articles( $request->all() );
+		$article->author = \Auth::user()->name;
+		\Auth::user()->article()->save( $article );
 		return redirect('articles');
 	}
 
