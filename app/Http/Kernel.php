@@ -6,7 +6,7 @@ class Kernel extends HttpKernel {
 
 	/**
 	 * The application's global HTTP middleware stack.
-	 *
+	 * for global use - edc
 	 * @var array
 	 */
 	protected $middleware = [
@@ -20,13 +20,18 @@ class Kernel extends HttpKernel {
 
 	/**
 	 * The application's route middleware.
-	 *
+	 * for dynamic use - edc
 	 * @var array
 	 */
 	protected $routeMiddleware = [
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+
+		/* ===================IGNORE=================== */
+		//Sample of Middleware process.
+		'foo' => 'App\Http\Middleware\RedirectIfNotFooer'
+		/* ===================IGNORE=================== */
 	];
 
 }

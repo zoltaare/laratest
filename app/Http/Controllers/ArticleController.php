@@ -7,6 +7,11 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller {
 
+	public function __construct()
+	{
+		$this->middleware('auth', ['only' => 'create']); //['except' => 'index']
+	}
+
 	public function index()
 	{
 		$articles = Articles::latest('published_at')->published()->get();

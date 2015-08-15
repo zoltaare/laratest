@@ -39,4 +39,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->hasMany('App\Articles');	
 	}
 
+
+	
+
+	/* ===============IGNORE=================== */
+	//Sample of Middleware process.
+	public function IsFooer(){ return true; }
+	/* ===============IGNORE=================== */
+
 }
